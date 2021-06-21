@@ -15,7 +15,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String accountName;
+    private String accountNumber;
 
     private AccountStatus status;
 
@@ -23,8 +23,8 @@ public class Account {
     public Account() {
     }
 
-    public Account(String accountName) {
-        this.accountName = accountName;
+    public Account(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public Long getId() {
@@ -35,12 +35,12 @@ public class Account {
         this.id = id;
     }
 
-    public String getAccountName() {
-        return accountName;
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
+    public void setAccountNumber(String accountName) {
+        this.accountNumber = accountName;
     }
 
     public AccountStatus getStatus() {

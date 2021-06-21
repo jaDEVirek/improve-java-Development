@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.DataFormatException;
 
 public class MainRunner {
 
@@ -13,6 +14,7 @@ public class MainRunner {
         names.set(0, "Asia");
         names.remove("Asia");
         System.out.println(names.size());
+
 
         for (String name : names) {
             // iterator use hasNext() - so the last element will never be delete

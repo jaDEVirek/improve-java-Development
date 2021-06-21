@@ -20,11 +20,17 @@ public class AccountEvent {
     @CreationTimestamp
     private Long timestamp;
 
-    private AccountEventType eventType;
+    private String accountNumber;
 
-    public AccountEvent(AccountEventType eventType) {
-        this.timestamp = new Date().getTime();
+    private AccountEventType eventType = AccountEventType.PENDING;
+
+    public AccountEvent(AccountEventType eventType, String accountNumber) {
         this.eventType = eventType;
+        this.accountNumber=accountNumber;
+    }
+
+    public AccountEvent() {
+        this.timestamp = new Date().getTime();
     }
 
     public AccountEventType getEventType() {
@@ -33,5 +39,13 @@ public class AccountEvent {
 
     public void setEventType(AccountEventType eventType) {
         this.eventType = eventType;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 }
