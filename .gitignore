@@ -6,7 +6,6 @@
 
 # BlueJ files
 *.ctxt
-.idea/
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -23,4 +22,6 @@
 hs_err_pid*
 src/main/resources/static/
 src/main/resources/templates/
+!/.idea/*
 /out/
+/.idea/
