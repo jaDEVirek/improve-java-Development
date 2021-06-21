@@ -22,6 +22,5 @@
 hs_err_pid*
 src/main/resources/static/
 src/main/resources/templates/
-!/.idea/*
 /out/
 /.idea/
