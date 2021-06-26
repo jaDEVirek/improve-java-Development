@@ -18,8 +18,7 @@ public class Account {
     private String accountNumber;
 
     private AccountStatus status;
-
-
+    
     public Account() {
     }
 

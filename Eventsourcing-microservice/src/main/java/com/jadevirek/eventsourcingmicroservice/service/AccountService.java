@@ -17,7 +17,7 @@ public class AccountService {
     }
 
     public Account getAccount(Long id) {
-        return accountRepository.getById(id);
+        return accountRepository.getOne(id);
     }
 
     public Account createAccount(CreateAccount createAccount) {

@@ -4,10 +4,7 @@ package com.jadevirek.eventsourcingmicroservice.model.events;
 import com.jadevirek.eventsourcingmicroservice.model.enums.AccountEventType;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -18,7 +15,8 @@ public class AccountEvent {
     private Long id;
 
     @CreationTimestamp
-    private Long timestamp;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date timestamp;
 
     private String accountNumber;
 
@@ -30,7 +28,7 @@ public class AccountEvent {
     }
 
     public AccountEvent() {
-        this.timestamp = new Date().getTime();
+        this.timestamp = new Date();
     }
 
     public AccountEventType getEventType() {
