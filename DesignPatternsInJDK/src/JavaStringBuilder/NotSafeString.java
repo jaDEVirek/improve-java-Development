@@ -5,7 +5,7 @@ public class NotSafeString {
     public static volatile int x;
 
     public static void main(String[] args) {
-
+        write()
         new Thread(new NotSafeString().runner("A")).start();
         new Thread(new NotSafeString().runner("B")).start();
         System.out.println("Builder " + stringBuilder.toString());

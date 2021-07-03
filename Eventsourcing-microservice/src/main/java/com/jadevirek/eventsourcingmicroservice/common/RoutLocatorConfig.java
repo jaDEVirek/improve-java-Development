@@ -13,6 +13,7 @@ import java.util.function.Function;
 
 /**
  * Redirection config for cloud gatwey for localhost:9999
+ *
  */
 @Configuration
 public class RoutLocatorConfig {
