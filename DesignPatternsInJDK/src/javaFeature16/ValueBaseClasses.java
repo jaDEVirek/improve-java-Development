@@ -11,5 +11,4 @@ public class ValueBaseClasses {
     private static final Long longVar = new Long(41l);
     private static final Integer intVar = new Integer(15);
 
-    isRecord
 }
