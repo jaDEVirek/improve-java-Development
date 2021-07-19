@@ -17,12 +17,18 @@ public class SealedClassAndInterfaces {
 
         Service serviceProvider = new AdminService("Admin", true, provideUsers);
 
-        switch (serviceProvider) {
-            case UserService us:
-
-            case UserService us:
-                default -> throw new IllegalStateException("Unexpected value: " + serviceProvider);
+        Class<?>[] permittedSubclasses = Service.class.getPermittedSubclasses();
+        for (Class<?> t : permittedSubclasses) {
+             System.out.println(t);
         }
+//        switch ( serviceProvider ) {
+//            case UserService us -> System.out.println(us.);
+//                break;
+//            case AdminService ad -> System.out.println(ad.);
+//                break;
+//            default ->
+//                throw new IllegalStateException("Unexpected value");
+//        }
 
     }
 }

@@ -11,8 +11,14 @@ public class MainRunner {
     int array[] = {1,2,3,4,5,6};
     int d = 11;
     Integer integer = 90;
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         List<String> names = new ArrayList<>();
+        byte b[] = {20,10,30,5};
+        for(int i=0;i<b.length;i++)
+        {
+            System.out.println("Element at Index : "+ i + " " + b[i]);
+        }
+
 
         MainRunner run = new MainRunner();
         run.modifyArr(run.array, run.d,run.integer);
