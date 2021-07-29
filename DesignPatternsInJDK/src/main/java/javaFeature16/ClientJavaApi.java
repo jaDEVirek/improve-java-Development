@@ -15,14 +15,12 @@ import java.util.*;
 
 public class ClientJavaApi {
 
-
     public static void main(String[] args) throws IOException, URISyntaxException {
         ClientJavaApi clientJavaApi = new ClientJavaApi();
        Map<String, Object> response = new ObjectMapper().readValue(clientJavaApi.callGet(), HashMap.class);
         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
         String countries = gson.toJson(response.get("Countries"));
         Country[] countries1 = gson.fromJson(countries, Country[].class);
-        System.out.println(countries);
         List.of(countries1).forEach(System.out::println);
 
 
